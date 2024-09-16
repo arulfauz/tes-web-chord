@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aqua;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+  }
+  
+.user-img{
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #12171e;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .main-content {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+.sidebar.active {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li  a:hover {
+    background-color: #fff;
+    color: #12171e;
+}
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgb(4, 24, 24);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    background-color: #eee;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background: #000522;
+}
+
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #022438;
+    position: relative;
+    height: 70px;
+}
+
+.logo{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #0a3552;
+    padding: 10%;
+    padding-left: 80%;
+    padding-right: 80%;
+    border-radius: 5px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+
+.fotoband{
+    max-width: 65%; 
+    height: auto;   
+    display: flex;
+    margin-top: 5%;
+    margin-left: 18%;
+}
+
+.option{
+    list-style-type: none;
+}
+
+.btn-1{
+    background-color: #004274;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 10%;
+    border-radius: 50px;
+    font-size: 160%;
+    box-shadow: 0px 0px 60px #0b011a;
+}
+
+.btn-1:hover{
+    box-shadow: 0px 0px 60px #2e06be;
+    transition: all 0.2s;
+}
+
+.btn-1:active{
+    background-color: #bce2ff;
+    color: #14425e;
+}
+
+.chords-option{
+    background-color: #004274;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 10%;
+    border-radius: 50px;
+    font-size: 160%;
+    box-shadow: 0px 0px 60px #0b011a;
+}
+
+.chords-option:hover{
+    box-shadow: 0px 0px 60px #2e06be;
+    transition: all 0.2s;
+}
+
+.chords-option:active{
+    background-color: #bce2ff;
+    color: #14425e;
+}
+
+
+.link1 {
+    text-decoration: none;
+    color: aqua;
+}
+
+.footer1{
+    text-align: center;
+    color: rgb(12, 116, 116);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.about-text{
+    color: aqua;
+    padding: 30px;
+    text-align: justify;
+    text-indent: 40px;
+
+}
+
+/*lirikk*/
+
+.judul-lagu{
+    color: aqua;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.artis-lagu{
+    color: rgb(112, 144, 173);
+    padding-left: 30px;
+    font-style: italic;
+    font-weight: 50;
+}
+
+
+.lirik-lagu{
+    text-align: left;
+    padding: 0px;
+    line-height: 130%;
+}
+
+.bagian-lagu{
+    text-align: center;
+    background-color: #2b2f47;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 550;
+}
